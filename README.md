@@ -27,7 +27,7 @@ para entrenamiento LSTM y generar predicciones con estos
 
 ## Fuentes de datos
 
-Los datos se consumen desde el repositorio publico:
+Los datos se consumen desde la extraccion de API:
 
 https://github.com/jriatiga/dataset/tree/main/proyectoGradoV3
 
