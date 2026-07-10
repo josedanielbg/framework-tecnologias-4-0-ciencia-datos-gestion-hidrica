@@ -69,7 +69,9 @@ python scripts/download_raw_data.py
 2. Abre la pestana `Actions`.
 3. Selecciona el workflow `Run pipeline`.
 4. Haz clic en `Run workflow`.
-5. Cuando termine, abre la ejecucion y descarga los artifacts `raw-data` y
+5. Cuando termine, los archivos quedan actualizados en `data/raw/` y
+   `data/processed/` dentro del repositorio.
+6. Tambien puedes abrir la ejecucion y descargar los artifacts `raw-data` y
    `processed-data`.
 
 El pipeline escribe los principales artefactos en `data/processed/`:
