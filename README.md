@@ -57,6 +57,14 @@ Opcion directa:
 python scripts/run_pipeline.py
 ```
 
+## Ejecucion desde GitHub web
+
+1. Entra al repositorio en GitHub.
+2. Abre la pestana `Actions`.
+3. Selecciona el workflow `Run pipeline`.
+4. Haz clic en `Run workflow`.
+5. Cuando termine, abre la ejecucion y descarga el artifact `processed-data`.
+
 El pipeline escribe los principales artefactos en `data/processed/`:
 
 - `Dataset_Maestro_Multiestacion_LSTM_V1.xlsx`
