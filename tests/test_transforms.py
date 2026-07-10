@@ -3,6 +3,7 @@ import unittest
 import pandas as pd
 
 from proyecto_grado_v6.hydrology import monthly_hydrology, remove_hydrology_outliers
+from proyecto_grado_v6.raw_data import raw_filename, safe_url
 from proyecto_grado_v6.transforms import clean_numeric_text, seasonal_mean_impute
 from proyecto_grado_v6.transforms import valid_year_month_mask
 
@@ -48,6 +49,18 @@ class TransformTests(unittest.TestCase):
         result = seasonal_mean_impute(df, "fecha", "valor")
 
         self.assertEqual(result.loc[1, "valor"], 10.0)
+
+    def test_raw_filename_decodes_url_encoded_names(self):
+        self.assertEqual(
+            raw_filename("ReservasHidr%C3%A1ulicasenMasa.csv"),
+            "ReservasHidr\u00e1ulicasenMasa.csv",
+        )
+
+    def test_safe_url_encodes_non_ascii_characters(self):
+        self.assertIn(
+            "ReservasHidr%C3%A1ulicasenMasa.csv",
+            safe_url("https://example.com/ReservasHidr\u00e1ulicasenMasa.csv"),
+        )
 
 
 if __name__ == "__main__":

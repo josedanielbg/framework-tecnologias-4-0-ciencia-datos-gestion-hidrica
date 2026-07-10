@@ -26,8 +26,18 @@ jobs:
       - name: Run tests
         run: python -m unittest discover tests
 
+      - name: Download raw data
+        run: python scripts/download_raw_data.py
+
       - name: Run data pipeline
         run: python scripts/run_pipeline.py
+
+      - name: Upload raw data
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-data
+          path: data/raw/
+          if-no-files-found: error
 
       - name: Upload processed data
         uses: actions/upload-artifact@v4

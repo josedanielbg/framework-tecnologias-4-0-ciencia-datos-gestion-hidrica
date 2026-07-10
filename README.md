@@ -57,13 +57,20 @@ Opcion directa:
 python scripts/run_pipeline.py
 ```
 
+Para descargar una copia local de los datos fuente del repositorio original:
+
+```bash
+python scripts/download_raw_data.py
+```
+
 ## Ejecucion desde GitHub web
 
 1. Entra al repositorio en GitHub.
 2. Abre la pestana `Actions`.
 3. Selecciona el workflow `Run pipeline`.
 4. Haz clic en `Run workflow`.
-5. Cuando termine, abre la ejecucion y descarga el artifact `processed-data`.
+5. Cuando termine, abre la ejecucion y descarga los artifacts `raw-data` y
+   `processed-data`.
 
 El pipeline escribe los principales artefactos en `data/processed/`:
 

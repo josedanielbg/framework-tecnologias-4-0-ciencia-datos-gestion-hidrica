@@ -9,6 +9,10 @@ RAW_BASE_URL = (
     "proyectoGradoV3"
 )
 
+SOURCE_CONTENTS_API = (
+    "https://api.github.com/repos/jriatiga/dataset/contents/proyectoGradoV3?ref=main"
+)
+
 NODE_COORDINATES = {
     "Villapinzon_Alta": {"lat": 5.21, "lon": -73.60},
     "Tocancipa_Media": {"lat": 4.96, "lon": -73.00},
@@ -27,7 +31,7 @@ DATA_FILES = {
     "hydrology_v3": "Serie_Tiempo_Niveles_Rio_Filtrado_V3.xlsx",
     "water_quality_v1": "Calidad_Agua_Rio_Bogota_V1.xlsx",
     "water_quality_top10": "Calidad_Agua_Rio_Bogota_Top10_Mensual.xlsx",
-    "human_consumption_quality": "Calidad_Agua_Consumo_Humano.xlsx",
+    "human_consumption_quality": "Calidad_Agua_Consumo_Humano2.xlsx",
     "oni_proxy": "Proxy_Climatico_ONI_Mensual.xlsx",
     "super_master_v3": "Dataset_Super_Maestro_Entrenamiento_V3.xlsx",
     "reservoirs": "ReservasHidr%C3%A1ulicasenMasa.csv",
@@ -57,4 +61,3 @@ class BasinBounds:
     lat_max: float = 5.5
     lon_min: float = -74.5
     lon_max: float = -73.5
-
