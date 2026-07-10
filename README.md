@@ -1,9 +1,9 @@
 # Framework para la Aplicacion de Tecnologias 4.0 y Ciencia de Datos en la Gestion Hidrica
 
-Repositorio profesionalizado a partir del notebook `dataProyectoV6.ipynb`.
-El objetivo es convertir las celdas de Colab en un pipeline modular para
+
+El objetivo es crear  un pipeline modular para
 preparar datos climaticos, hidrologicos, de calidad de agua y macrocontexto
-para entrenamiento LSTM.
+para entrenamiento LSTM y generar predicciones con estos
 
 ## Autores
 
