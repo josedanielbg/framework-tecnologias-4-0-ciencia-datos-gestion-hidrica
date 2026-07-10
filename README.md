@@ -1,23 +1,28 @@
-# Proyecto Grado V6 - Pipeline de datos Rio Bogota
+# Framework para la Aplicacion de Tecnologias 4.0 y Ciencia de Datos en la Gestion Hidrica
 
 Repositorio profesionalizado a partir del notebook `dataProyectoV6.ipynb`.
 El objetivo es convertir las celdas de Colab en un pipeline modular para
 preparar datos climaticos, hidrologicos, de calidad de agua y macrocontexto
 para entrenamiento LSTM.
 
+## Autores
+
+- Jose Barreto
+- Juan Riataga
+
 ## Estructura
 
 ```text
 .
-├── data/
-│   ├── raw/              # Datos locales crudos, ignorados por Git
-│   └── processed/        # Artefactos generados, ignorados por Git
-├── notebooks/            # Notebook original para referencia y demo
-├── scripts/              # Scripts ejecutables
-├── src/proyecto_grado_v6 # Codigo fuente modular
-├── tests/                # Pruebas unitarias de transformaciones clave
-├── requirements.txt
-└── pyproject.toml
+|-- data/
+|   |-- raw/              # Datos locales crudos, ignorados por Git
+|   `-- processed/        # Artefactos generados, ignorados por Git
+|-- notebooks/            # Notebook original para referencia y demo
+|-- scripts/              # Scripts ejecutables
+|-- src/proyecto_grado_v6 # Codigo fuente modular
+|-- tests/                # Pruebas unitarias de transformaciones clave
+|-- requirements.txt
+`-- pyproject.toml
 ```
 
 ## Fuentes de datos
@@ -66,6 +71,17 @@ El pipeline escribe los principales artefactos en `data/processed/`:
 python -m unittest discover tests
 ```
 
+## Equivalencia con el notebook
+
+El repositorio conserva el notebook original en `notebooks/` y extrae el nucleo
+reproducible a funciones. El pipeline genera los artefactos principales del
+notebook usando las mismas fuentes de datos publicadas en GitHub y las mismas
+reglas de transformacion documentadas en las celdas.
+
+No se migraron como parte del nucleo las celdas puramente narrativas, las
+visualizaciones exploratorias ni los graficos de apoyo. Esas celdas quedan en el
+notebook original para consulta.
+
 ## Notas de migracion desde Colab
 
 - La logica repetible vive en `src/proyecto_grado_v6/`.
@@ -76,4 +92,4 @@ python -m unittest discover tests
 
 ## Licencia
 
-Definir la licencia antes de publicar el repositorio.
+Sin licencia por ahora.
