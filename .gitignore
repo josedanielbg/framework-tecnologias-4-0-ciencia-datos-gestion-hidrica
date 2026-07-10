@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data and generated artifacts
+data/raw/*
+data/processed/*
+outputs/
+reports/
+*.xlsx
+*.csv
+*.parquet
+*.pkl
+*.h5
+*.keras
+*.png
+
+# Keep folder placeholders
+!data/raw/.gitkeep
+!data/processed/.gitkeep

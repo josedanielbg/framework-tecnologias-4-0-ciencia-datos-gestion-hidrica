@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proyecto-grado-v6"
+version = "0.1.0"
+description = "Pipeline modular para construir datasets hidrologicos, climaticos y de calidad de agua de la cuenca del Rio Bogota."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.1",
+  "numpy>=1.26",
+  "requests>=2.31",
+  "openpyxl>=3.1",
+  "scikit-learn>=1.4",
+  "matplotlib>=3.8",
+  "seaborn>=0.13",
+]
+
+[project.scripts]
+proyecto-grado-v6 = "proyecto_grado_v6.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
