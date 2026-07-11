@@ -35,9 +35,6 @@ jobs:
       - name: Run data pipeline
         run: python scripts/run_pipeline.py
 
-      - name: Build clean modeling dataset
-        run: python scripts/build_model_dataset.py
-
       - name: Commit data outputs
         run: |
           git config user.name "github-actions[bot]"

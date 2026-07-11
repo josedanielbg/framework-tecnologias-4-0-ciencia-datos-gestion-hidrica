@@ -63,12 +63,6 @@ Para descargar una copia local de los datos fuente del repositorio original:
 python scripts/download_raw_data.py
 ```
 
-Para construir el dataset mensual limpio de modelado:
-
-```bash
-python scripts/build_model_dataset.py
-```
-
 ## Ejecucion desde GitHub web
 
 1. Entra al repositorio en GitHub.
@@ -87,14 +81,6 @@ El pipeline escribe los principales artefactos en `data/processed/`:
 - `Calidad_Agua_Rio_Bogota_Top10_Mensual.xlsx`
 - `Proxy_Climatico_ONI_Mensual.xlsx`
 - `Dataset_V5_Final_Normalizado.xlsx`
-- `Dataset_Modelado_Mensual_Limpio.xlsx`
-- `Dataset_Modelado_Mensual_Supervisado.xlsx`
-- `Dataset_Modelado_Mensual_Compacto.xlsx`
-
-Para entrenar un primer modelo, se recomienda comenzar con
-`Dataset_Modelado_Mensual_Compacto.xlsx`. Tiene una fila por mes, evita el tramo
-2005-2014 rellenado artificialmente, separa `train`, `validation` y `test`, y
-usa `target_nivel_rio_m_t_plus_1` como objetivo de prediccion a un mes.
 
 ## Pruebas
 
